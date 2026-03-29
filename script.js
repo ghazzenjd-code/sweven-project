@@ -1,12 +1,19 @@
-// Navbar toggle for mobile
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+console.log("SWEVEN website loaded");
+<script src="../js/script.js"></script>
+const menu = document.querySelector("nav");
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+menu.addEventListener("click", () => {
+  console.log("Navbar clicked");
 });
+<button id="buyBtn">Buy Now</button>
+const button = document.getElementById("buyBtn");
 
-// Example Explore button message
-function showMessage() {
-    alert('Welcome to SWEVEN! Explore our bold streetwear collection.');
-}
+button.addEventListener("click", () => {
+  alert("Product added to cart");
+});
+window.addEventListener("scroll", () => {
+    console.log("User is scrolling");
+  });
+  window.onload = function() {
+    alert("Welcome to SWEVEN");
+  };
