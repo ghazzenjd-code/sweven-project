@@ -1,90 +1,117 @@
-# SWEVEN - Mini Site Web
+# 🧥 SWEVEN - Mini Site Web
 
 ## 📌 Description
+Ce projet consiste en la création d’un mini site web statique pour la marque streetwear **SWEVEN**.
 
-Ce projet est un mini site web pour la marque streetwear SWEVEN.
-
-Objectif :
-- Apprendre Git et GitHub
-- Travailler en équipe
-- Utiliser un workflow professionnel
+🎯 Objectifs :
+- Apprendre et maîtriser Git et GitHub
+- Travailler efficacement en équipe
+- Appliquer un workflow professionnel de développement
 
 ---
 
 ## 👥 Membres du groupe
-
-- Ghassen Jdidi (Gestion Git + organisation)
-- Brahim (HTML)
-- Fahed (CSS)
-- Abdeljalil (JavaScript)
+- **Ghassen Jdidi** — Gestion Git & organisation
+- **Brahim** — Développement HTML
+- **Fahed** — Design CSS & responsive
+- **Abdeljalil** — JavaScript & interactions
 
 ---
 
 ## 📁 Structure du projet
 
----
+sweven-project/
+│
+├── html/
+│ └── index.html
+│
+├── css/
+│ └── style.css
+│
+├── js/
+│ └── script.js
+│
+└── README.md
 
-## 🔀 Workflow Git
-
-- main → version finale
-- develop → intégration
-- feature → travail individuel
-
-Chaque membre travaille sur sa propre branche.
-
----
-
-## 💻 Commandes Git utilisées
-
----
-
-## 🔄 Collaboration
-
-- Création de branches
-- Utilisation de Pull Requests
-- Commentaires entre membres
-- Travail en équipe organisé
 
 ---
 
-## ⚠️ Gestion de conflit
+## ⚙️ Installation
+1. Cloner le dépôt :
+```bash
+git clone https://github.com/ghazzenjd-code/sweven-project.git
+Accéder au dossier :
+cd sweven-project
+Ouvrir le projet :
+Ouvrir html/index.html dans votre navigateur
+🔀 Workflow Git utilisé
+main → version stable du projet
+develop → branche d’intégration
+feature-* → branches de fonctionnalités
 
-Un conflit a été créé volontairement :
+Chaque membre :
 
-- Deux membres ont modifié le même fichier (CSS)
-- Lors du merge, Git a détecté un conflit
+crée une branche
+développe une fonctionnalité
+ouvre une Pull Request vers develop
+💻 Commandes Git utilisées
+git clone <repo-url>
+git checkout -b feature-nom
+git add .
+git commit -m "feat: description"
+git push origin feature-nom
 
-### Solution :
+git pull origin develop
+git merge develop
 
-- Modification manuelle du fichier
-- Validation avec :
+git add .
+git commit -m "fix: resolve conflict"
+🔄 Travail collaboratif
+Création de branches pour chaque fonctionnalité
+Utilisation des Pull Requests pour intégrer le code
+Relecture et commentaires entre membres
+Utilisation des Issues pour organiser les tâches
+Suivi du projet avec un Project Board
+🧩 Gestion des conflits Git
+📍 Cause
 
----
+Un conflit est apparu lorsque deux membres ont modifié le même fichier CSS.
 
-## 🌐 Site Web
+⚠️ Détection
 
-Le site contient :
+Lors du merge, Git a signalé un conflit avec des marqueurs :
 
-- Homepage (présentation SWEVEN)
-- Navbar
-- Produits
-- Footer
-- Contact
+<<<<<<< HEAD
+=======
+>>>>>>> branch
+✅ Résolution
+Ouverture du fichier en conflit
+Analyse des deux versions du code
+Suppression des marqueurs Git
+Conservation de la bonne version
+Sauvegarde du fichier
+🔧 Commandes utilisées
+git add .
+git commit -m "fix: resolve merge conflict"
+🌐 Fonctionnalités du site
+Homepage (présentation de la marque)
+Navbar responsive
+Section produits
+Design moderne (CSS)
+Interactions JavaScript
+Footer et page contact
+🎯 Résultat
 
----
+✔ Site web fonctionnel
+✔ Workflow Git respecté
+✔ Travail collaboratif réussi
+✔ Gestion des versions maîtrisée
 
-## 🎯 Résultat
+🚀 Conclusion
 
-- Projet fonctionnel
-- Bonne organisation Git
-- Travail collaboratif réussi
+Ce projet nous a permis de :
 
----
-
-## 🚀 Conclusion
-
-Ce projet nous a permis de comprendre :
-
-- Le fonctionnement de Git
-- Le travail en équipe
-- La gestion des versions
+Comprendre le fonctionnement de Git et GitHub
+Travailler efficacement en équipe
+Gérer un projet avec un workflow professionnel
+Résoudre des conflits de code
