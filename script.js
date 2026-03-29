@@ -14,3 +14,6 @@ button.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
     console.log("User is scrolling");
   });
+  window.onload = function() {
+    alert("Welcome to SWEVEN");
+  };
