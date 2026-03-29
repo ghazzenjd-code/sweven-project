@@ -1,45 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SWEVEN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWEVEN | Streetwear Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Navbar -->
-    <nav>
-        <h1>SWEVEN clothing</h1>
-        <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">SWEVEN</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-primary" id="menu-toggle">Menu</button>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h2>Dream Beyond Reality</h2>
-        <p>Streetwear for the bold</p>
-        <button onclick="showMessage()">Explore</button>
+    <section id="home" class="hero">
+        <div class="hero-content container">
+            <h2 class="hero-title">Dream Beyond Reality</h2>
+            <p class="hero-subtitle">Streetwear for the bold</p>
+            <button class="btn btn-hero" onclick="showMessage()">Explore Now</button>
+        </div>
     </section>
 
-    <!-- Products -->
-    <section class="products">
-        <h2>Our Products</h2>
-        <div class="card">Hoodie</div>
-        <div class="card">T-Shirt</div>
-        <div class="card">Outfit</div>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/hoodie.jpg" alt="Hoodie" class="product-img">
+                    <h3>Hoodie</h3>
+                    <p>Stay cozy and stylish with our premium hoodies.</p>
+                    <button class="btn btn-secondary">Shop Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt.jpg" alt="T-Shirt" class="product-img">
+                    <h3>T-Shirt</h3>
+                    <p>Bold designs for your everyday streetwear vibe.</p>
+                    <button class="btn btn-secondary">Shop Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/outfit.jpg" alt="Outfit" class="product-img">
+                    <h3>Outfit</h3>
+                    <p>Complete looks crafted for confidence and style.</p>
+                    <button class="btn btn-secondary">Shop Now</button>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: sweven@gmail.com</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p>Have questions? Reach out to us:</p>
+            <a href="mailto:sweven@gmail.com" class="contact-email">sweven@gmail.com</a>
+        </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SWEVEN. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="../js/script.js"></script>
 </body>
-<footer>
-  <p>© 2026 SWEVEN</p>
-  <p>Contact: sweven@gmail.com</p>
-</footer>
 </html>
