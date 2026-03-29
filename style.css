@@ -5,3 +5,15 @@ body {
   background-color: black;
   color: white;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #111;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
