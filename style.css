@@ -36,3 +36,9 @@ div p {
   padding: 20px;
   border-radius: 10px;
 }
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  margin-top: 40px;
+}
