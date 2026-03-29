@@ -11,3 +11,6 @@ const button = document.getElementById("buyBtn");
 button.addEventListener("click", () => {
   alert("Product added to cart");
 });
+window.addEventListener("scroll", () => {
+    console.log("User is scrolling");
+  });
