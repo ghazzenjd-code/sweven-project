@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  # Main Web Service
+  web:
+    build: .
+    container_name: sweven_web
+    ports:
+      - "8080:80"
+    restart: always
+
+  # Bonus Service: Simple log viewer/dummy backend
+  log_service:
+    image: python:3.9-alpine
+    container_name: sweven_logs
+    command: python -m http.server 8081
+    ports:
+      - "8081:8081"
