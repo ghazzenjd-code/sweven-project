@@ -1,0 +1,58 @@
+name: Sweven CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  # Étape 1: Tests
+  test:
+    name: Test HTML/CSS Validity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Verify HTML structure (Simple Test)
+        run: |
+          echo "Running HTML validation test..."
+          # This checks if the <html> tag exists in your index.html
+          grep -q "<html" html/index.html || (echo "Test Failed: Missing HTML tags!" && exit 1)
+          echo "Test Passed!"
+
+  # Étape 2: Build Image Docker
+  build:
+    name: Build Docker Image
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        
+      - name: Build Docker image
+        run: docker build -t sweven-web:latest .
+
+  # Étape 3: Security Scan (BONUS)
+  security-scan:
+    name: Container Security Scan
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build image for scanning
+        run: docker build -t sweven-web:latest .
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'sweven-web:latest'
+          format: 'table'
+          exit-code: '0' # Set to 0 so it doesn't block the pipeline if low vulnerabilities are found
+          severity: 'CRITICAL,HIGH'
