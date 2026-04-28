@@ -1,117 +1,41 @@
-# 🧥 SWEVEN - Mini Site Web
+# 🏙️ SWEVEN - Streetwear Brand Infrastructure
 
-## 📌 Description
-Ce projet consiste en la création d’un mini site web statique pour la marque streetwear **SWEVEN**.
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 
-🎯 Objectifs :
-- Apprendre et maîtriser Git et GitHub
-- Travailler efficacement en équipe
-- Appliquer un workflow professionnel de développement
+Bienvenue sur le dépôt officiel du projet **SWEVEN**, une application web de marque de streetwear industrialisée avec une architecture DevOps moderne. 
 
----
+Ce projet a été réalisé dans le cadre de notre évaluation DS2 pour démontrer la mise en place d'une pipeline d'intégration et de déploiement continus (CI/CD) ainsi que la conteneurisation d'applications.
 
-## 👥 Membres du groupe
-- **Ghassen Jdidi** — Gestion Git & organisation
-- **Brahim** — Développement HTML
-- **Fahed** — Design CSS & responsive
-- **Abdeljalil** — JavaScript & interactions
+## 👥 L'Équipe (Groupe de Travail)
+* **Ghassen Jdidi** - Architecture DevOps, CI/CD & Git Lead
+* **Brahim** - Développement HTML & Tests Pipeline
+* **Fahed** - Design CSS & Tests Pipeline
+* **Abdeljalil** - JavaScript & Tests Pipeline
 
----
+## 🏗️ Architecture du Projet
 
-## 📁 Structure du projet
+Notre infrastructure repose sur plusieurs piliers technologiques :
 
-sweven-project/
-│
-├── html/
-│ └── index.html
-│
-├── css/
-│ └── style.css
-│
-├── js/
-│ └── script.js
-│
-└── README.md
+1. **Conteneurisation (Docker) :** Le site web est encapsulé dans une image `nginx:alpine`, choisie pour sa légèreté, sa rapidité de déploiement et sa sécurité accrue.
+2. **Orchestration Multi-Services (Docker Compose) :** L'environnement de production local déploie simultanément le serveur web (Port 8080) et un service de logs secondaire (Port 8081).
+3. **Automatisation (GitHub Actions) :** Une pipeline CI/CD complète est déclenchée à chaque modification sur les branches principales (`main` et `develop`).
 
+## ⚙️ La Pipeline CI/CD
 
----
+Notre workflow GitHub Actions (`ci.yml`) exécute automatiquement trois tâches essentielles :
+- ✅ **Test HTML/CSS :** Vérification de l'intégrité du code source.
+- ✅ **Build Docker :** Construction automatisée de l'image `sweven-project-web`.
+- ✅ **Security Scan (Bonus) :** Analyse des vulnérabilités de l'image générée.
 
-## ⚙️ Installation
-1. Cloner le dépôt :
-```bash
-git clone https://github.com/ghazzenjd-code/sweven-project.git
-Accéder au dossier :
-cd sweven-project
-Ouvrir le projet :
-Ouvrir html/index.html dans votre navigateur
-🔀 Workflow Git utilisé
-main → version stable du projet
-develop → branche d’intégration
-feature-* → branches de fonctionnalités
+*Note : La branche `main` est protégée. Aucun code ne peut être fusionné si la pipeline échoue.*
 
-Chaque membre :
+## 🚀 Comment lancer le projet en local
 
-crée une branche
-développe une fonctionnalité
-ouvre une Pull Request vers develop
-💻 Commandes Git utilisées
-git clone <repo-url>
-git checkout -b feature-nom
-git add .
-git commit -m "feat: description"
-git push origin feature-nom
+Prérequis : Avoir [Docker Desktop](https://www.docker.com/products/docker-desktop) installé et en cours d'exécution.
 
-git pull origin develop
-git merge develop
-
-git add .
-git commit -m "fix: resolve conflict"
-🔄 Travail collaboratif
-Création de branches pour chaque fonctionnalité
-Utilisation des Pull Requests pour intégrer le code
-Relecture et commentaires entre membres
-Utilisation des Issues pour organiser les tâches
-Suivi du projet avec un Project Board
-🧩 Gestion des conflits Git
-📍 Cause
-
-Un conflit est apparu lorsque deux membres ont modifié le même fichier CSS.
-
-⚠️ Détection
-
-Lors du merge, Git a signalé un conflit avec des marqueurs :
-
-<<<<<<< HEAD
-=======
->>>>>>> branch
-✅ Résolution
-Ouverture du fichier en conflit
-Analyse des deux versions du code
-Suppression des marqueurs Git
-Conservation de la bonne version
-Sauvegarde du fichier
-🔧 Commandes utilisées
-git add .
-git commit -m "fix: resolve merge conflict"
-🌐 Fonctionnalités du site
-Homepage (présentation de la marque)
-Navbar responsive
-Section produits
-Design moderne (CSS)
-Interactions JavaScript
-Footer et page contact
-🎯 Résultat
-
-✔ Site web fonctionnel
-✔ Workflow Git respecté
-✔ Travail collaboratif réussi
-✔ Gestion des versions maîtrisée
-
-🚀 Conclusion
-
-Ce projet nous a permis de :
-
-Comprendre le fonctionnement de Git et GitHub
-Travailler efficacement en équipe
-Gérer un projet avec un workflow professionnel
-Résoudre des conflits de code
+1. **Cloner le dépôt :**
+   ```bash
+   git clone [https://github.com/ghazzenjd-code/sweven-project.git](https://github.com/ghazzenjd-code/sweven-project.git)
+   cd sweven-project
